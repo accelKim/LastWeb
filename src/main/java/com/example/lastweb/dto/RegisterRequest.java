@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RegisterRequest {
-    private String firstname;
-    private String lastname;
+    private String nickname;
+    private String phone;
     private String email;
     private String password;
 }

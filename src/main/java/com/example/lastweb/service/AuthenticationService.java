@@ -30,8 +30,8 @@ public class AuthenticationService{
         }
         // 회원가입을 위해 유저를 db에 등록
         User user = User.builder()
-                .firstname(request.getFirstname())
-                .lastname(request.getLastname())
+                .nickname(request.getNickname())
+                .phone(request.getPhone())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword())) // 비밀번호 인코딩
                 .role(Role.USER)

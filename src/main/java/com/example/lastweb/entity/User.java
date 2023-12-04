@@ -21,10 +21,10 @@ public class User implements UserDetails {
     private Long id;
 
     @Column
-    private String firstname;
+    private String nickname;
 
     @Column
-    private String lastname;
+    private String phone;
 
     @Column
     private String email;
@@ -50,6 +50,13 @@ public class User implements UserDetails {
     public String getPassword() {
         return this.password;
     }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setPassword(String password) { this.password = password; }
+
 
     @Override
     public boolean isAccountNonExpired() {
