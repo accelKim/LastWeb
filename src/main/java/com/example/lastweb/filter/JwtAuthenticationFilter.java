@@ -32,18 +32,18 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             @NonNull FilterChain filterChain)
             throws ServletException, IOException {
         // 헤더에서 Authroization 값을 찾음
-        final String JWT_PREFIX = "Bearer ";
-        final String JWT_HEADER_KEY = "Authorization";
-        final String authHeader = request.getHeader(JWT_HEADER_KEY);
+        final String BEARER_PREFIX = "Bearer ";
+        final String AUTHORIZATION_HEADER = "Authorization";
+        final String authHeader = request.getHeader(AUTHORIZATION_HEADER);
         final String jwt;
         final String userEmail;
 
         // jwt token 형식이 아니면 요청을 차단함
-        if (authHeader == null || !authHeader.startsWith(JWT_PREFIX)) {
+        if (authHeader == null || !authHeader.startsWith(BEARER_PREFIX)) {
             filterChain.doFilter(request, response);
             return;
         }
-        jwt = authHeader.substring(JWT_PREFIX.length());
+        jwt = authHeader.substring(BEARER_PREFIX.length());
         userEmail = jwtService.extractUsername(jwt); // JWT 토큰으로 부터 유저 이메일 추출
         // jwt 토큰에 유저 이메일이 없고, 아직 인증되지 않은 유저라면
         if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {

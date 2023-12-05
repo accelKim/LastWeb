@@ -3,9 +3,7 @@ package com.example.lastweb.service;
 
 import com.example.lastweb.common.Constants;
 import com.example.lastweb.common.exception.CustomException;
-import com.example.lastweb.dto.AuthenticationRequest;
-import com.example.lastweb.dto.AuthenticationResponse;
-import com.example.lastweb.dto.RegisterRequest;
+import com.example.lastweb.dto.*;
 import com.example.lastweb.entity.Role;
 import com.example.lastweb.entity.User;
 import com.example.lastweb.repository.UserRepository;

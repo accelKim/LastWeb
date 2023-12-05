@@ -22,7 +22,8 @@ public class JwtService {
     private String SECRET_KEY; // jwt 서명 키
 
     @Value("${security.jwt.expired_after_ms}")
-    private int JWT_EXPIRED_AFTER_MS; // jwt 토큰 발급 후 몇 ms 후 만료 되는 지
+    private long JWT_EXPIRED_AFTER_MS; // jwt 토큰 발급 후 몇 ms 후 만료 되는 지
+    private static final String BEARER_TYPE = "bearer";
 
     // token으로 부터 username(이메일)을 추출한다.
     public String extractUsername(String token) {
