@@ -37,8 +37,6 @@ public ResponseEntity<AdminUsers> updateUser(@PathVariable Integer user_id, @Req
       .orElseThrow(() -> new ResourceNotFoundException("User not exist with id : " + user_id));
 
   adminUsers.setName(adminUsersDetails.getName());
-  adminUsers.setId(adminUsersDetails.getId());
-  adminUsers.setPassword(adminUsersDetails.getPassword());
   adminUsers.setIsadmin(adminUsersDetails.isIsadmin());
   adminUsers.setEmail(adminUsersDetails.getEmail());
   adminUsers.setAddress(adminUsersDetails.getAddress());

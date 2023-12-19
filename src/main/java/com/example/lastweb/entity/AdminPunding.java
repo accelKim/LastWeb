@@ -33,7 +33,7 @@ public class AdminPunding {
   private Integer likes;
 
   @Column(name = "status")
-  private boolean status;
+  private Integer status;
 
   @Column(name = "image")
   private String image;

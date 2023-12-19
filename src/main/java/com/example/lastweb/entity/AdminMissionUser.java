@@ -1,5 +1,7 @@
 package com.example.lastweb.entity;
 
+
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,10 +14,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AdminMission {
+public class AdminMissionUser {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer mission_id;
+  private Integer mu_id;
 
   @Column(name = "title")
   private String title;
@@ -23,19 +25,16 @@ public class AdminMission {
   @Column(name = "content")
   private String content;
 
-  @Column(name = "created_at")
-  private String created_at;
-
-  @Column(name = "modify_at")
-  private String modify_at;
-
-  @Column(name = "point")
-  private Integer point;
+  @Column(name = "submit_at")
+  private String submit_at;
 
   @Column(name = "status")
   private Integer status;
 
   @Column(name = "image")
   private String image;
+
+  @Column(name = "user")
+  private  String user;
 
 }

@@ -47,7 +47,7 @@ public class AdminPundingService {
     adminPunding.setLikes(adminPundingDetail.getLikes());
     adminPunding.setImage2(adminPundingDetail.getImage2());
     adminPunding.setModified_at(adminPundingDetail.getModified_at());
-    adminPunding.setStatus(adminPundingDetail.isStatus());
+    adminPunding.setStatus(adminPundingDetail.getStatus());
 
     AdminPunding updatePunding = adminPundingRepository.save(adminPunding);
     return ResponseEntity.ok(updatePunding);
