@@ -32,7 +32,7 @@ public class Qna {
   private String   modify_at;
 
   @Column(name = "status")
-  private Boolean status;
+  private Integer status;
 
   @Column(name = "category")
   private Integer category;
