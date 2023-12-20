@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table
 @Getter
@@ -24,10 +26,10 @@ public class AdminPunding {
   private String content;
 
   @Column(name = "start")
-  private String start;
+  private LocalDateTime start;
 
   @Column(name = "end")
-  private String end;
+  private LocalDateTime end;
 
   @Column(name = "likes")
   private Integer likes;

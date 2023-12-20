@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table
 @Getter
@@ -37,5 +39,11 @@ public class AdminMission {
 
   @Column(name = "image")
   private String image;
+
+  @Column(name = "start")
+  private LocalDateTime start;
+
+  @Column(name = "end")
+  private LocalDateTime end;
 
 }

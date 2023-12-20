@@ -42,6 +42,8 @@ public class AdminMissionService {
         adminMission.setModify_at(adminMissionDetail.getModify_at());
         adminMission.setImage(adminMissionDetail.getImage());
         adminMission.setStatus(adminMissionDetail.getStatus());
+        adminMission.setStart(adminMissionDetail.getStart());
+        adminMission.setEnd(adminMissionDetail.getEnd());
 
     AdminMission updateMission = adminMissionRepository.save(adminMission);
     return ResponseEntity.ok(updateMission);
